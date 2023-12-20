@@ -39,6 +39,7 @@ export default function UserContextProvider({ children }) {
 
   function logOut(){
     localStorage.removeItem("token")
+    setTokenUser(null)
   }
 
   return (
