@@ -20,13 +20,9 @@ export default function Home() {
         <i className="bi bi-folder me-2"></i>My Notes
       </h2>
 
-      {allNots == null ? (
-        <Loading /> 
-      ) :
-        <div className={style.notes}>
-          {allNots.map((note) => (
-            <Note key={note._id} noteobj={note} />
-          )}
+      {allNots == null ? <Loading /> 
+       : <div className={style.notes}>
+          {allNots.map((note) =><Note key={note._id} noteobj={note} />}         }
         </div>
       )}
     </>
