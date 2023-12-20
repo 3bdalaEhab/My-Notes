@@ -22,11 +22,11 @@ export default function Home() {
 
       {allNots == null ? (
         <Loading /> 
-      ) :allNots.length === 0? <h2>No Notes found</h2>: (
+      ) :
         <div className={style.notes}>
           {allNots.map((note) => (
             <Note key={note._id} noteobj={note} />
-          ))}
+          )}
         </div>
       )}
     </>
