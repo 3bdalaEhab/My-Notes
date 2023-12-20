@@ -12,6 +12,8 @@ export default function UserContextProvider({ children }) {
         value
       );
       localStorage.setItem("token" ,`3b8ny__${data.token}`)
+            setTokenUser(`3b8ny__${data.token}`)
+
       return data;
     } catch (error) {
       let err = error.response.data.msg;
